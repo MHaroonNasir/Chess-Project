@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using OpenCover.Framework.Model;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Controller : MonoBehaviour
 {
     [SerializeField] PieceType pieceType;
+    Type getPiece;
 
     public InputAction select;
 
@@ -13,6 +16,7 @@ public class Controller : MonoBehaviour
     {
         //select.performed += Highlight;
         select.Enable();
+        getPiece = Piece.GetTypeOfScript(pieceType);
     }
 
     /*void Update()
@@ -30,6 +34,12 @@ public class Controller : MonoBehaviour
 
     private void OnMouseDown() 
     {
-        Debug.Log("performed");
+        //getPiece = Piece.GetTypeOfScript(pieceType);
+        /*object piece = Activator.CreateInstance(getPiece);
+        piece.GetAllMovePaths();
+        Debug.Log(getPiece);
+        getPiece.GetAllMovePaths(new Vector2Int((int) transform.position.x, (int) transform.position.y));
+        BishopPiece bishop = new BishopPiece();
+        bishop.GetAllMovePaths(new Vector2Int((int) transform.position.x, (int) transform.position.y));*/
     }
 }

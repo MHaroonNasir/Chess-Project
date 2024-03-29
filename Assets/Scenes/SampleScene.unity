@@ -1049,6 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44cdca20752fd84da1cb150a66a2750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pieceType: 0
   select:
     m_Name: Select
     m_Type: 1
@@ -4040,7 +4041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1570934471
 Transform:
   m_ObjectHideFlags: 0

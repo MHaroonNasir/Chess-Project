@@ -36,7 +36,7 @@ public class BoardManager : MonoBehaviour
                 {
                     tileObject = Instantiate(blackTile, new Vector3Int(x*5, 0, z*5), Quaternion.identity);
                 }
-                tileObject.GetComponent<TileObject>().SetupTile();
+                //tileObject.GetComponent<TileObject>().SetupTile();
 
                 //Tile tile = new Tile(new Vector2Int(x*5, z*5), hasPiece, pieceColour);
                 //gameBoard.Add(tile, coordinates);
@@ -46,4 +46,6 @@ public class BoardManager : MonoBehaviour
             pieceColour = null;
         }    
     }
+
+    
 }
